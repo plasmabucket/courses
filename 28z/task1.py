@@ -9,3 +9,4 @@ def squirrel(n: int) -> int:
         result = result // 10
     return result
 
+
