@@ -1,5 +1,5 @@
-def PrintingCosts(line: str) -> int:
-    cost_table: dict[str, int] = {
+def PrintingCosts(string: str) -> int:
+    costs: dict[str, int] = {
         " ": 0,  "!": 9,  '"': 6,  "#": 24, "$": 29, "%": 22, "&": 24,
         "'": 3,  "(": 12, ")": 12, "*": 17, "+": 13, ",": 7,  "-": 7,
         ".": 4,  "/": 10, "0": 22, "1": 19, "2": 22, "3": 23, "4": 21,
@@ -15,10 +15,13 @@ def PrintingCosts(line: str) -> int:
         "t": 17, "u": 17, "v": 13, "w": 19, "x": 13, "y": 24, "z": 19,
         "{": 18, "|": 12, "}": 18, "~": 9
     }
-    printing_cost: int = 0
-    for char in line:
-        printing_cost += cost_table.get(char, 23)
-    return printing_cost
+    total_cost: int = 0
+    for i in range(len(string)):
+        if string[i] not in costs:
+            total_cost += 23
+        else:
+            total_cost += costs[string[i]]
+    return total_cost
 
 
 
