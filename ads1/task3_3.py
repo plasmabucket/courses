@@ -20,7 +20,7 @@ def equal(array1: DynArray | DynBanking,
 class Task3MainTests(unittest.TestCase):
     """Class for unit tests for the main task."""
 
-    # Tests for insertion from exercise 4
+    # Tests for insertion (ex 1) from exercise 4
     def test_insert_no_resize(self) -> None:
         """Tests insertion without array reallocation."""
         array: DynArray = DynArray()
@@ -120,7 +120,7 @@ class Task3MainTests(unittest.TestCase):
         self.assertTrue(equal(expected, array),
             "Insertion in a large array with resize is incorrect.")
 
-    # Tests for deletion from exercise 4
+    # Tests for deletion (ex 2) from exercise 4
     def test_delete_no_resize(self) -> None:
         """Tests deletion without reallocation."""
         array: DynArray = DynArray()
@@ -287,7 +287,7 @@ class Task3ExtraTests(unittest.TestCase):
             collector.append(array[i][j][k])
 
         self.assertEqual([0, 1, 2, 3, 4, 5], collector,
-            "Insertion and extraction of values is incorrect.")
+            "Initialization of the array is incorrect.")
 
     def test_multidim_resize(self) -> None:
         """Simple test for the resizing of dimensions."""

@@ -2,7 +2,7 @@ import ctypes
 import math
 
 
-# Task 3 = exercise 5.* - Dynamic array using banking method
+# Task 3 - exercise 5.* - Dynamic array using banking method
 class DynBanking:
 
     # Added two new fields - current balance and its limit

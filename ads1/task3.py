@@ -33,7 +33,7 @@ class DynArray:
         self.count += 1
 
 
-    # exercise 1
+    # Exercise 1
     # Space complexity: O(n) - worst case, o(1) - average case
     # Time complexity:  O(n)
     def insert(self, ind: int, itm) -> None:
@@ -57,7 +57,7 @@ class DynArray:
         self.array = new_array
         self.count += 1
 
-    # exercise 2
+    # Exercise 2
     # Space complexity: O(n) - worst case, o(1) - average case
     # Time complexity;  O(n)
     def delete(self, ind: int) -> None:
