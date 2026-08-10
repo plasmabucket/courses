@@ -147,9 +147,13 @@ class Task4ExtraTests(unittest.TestCase):
         for i in range(10000):
             stack: StackExtra = StackExtra()
             sequence: list[int] = random.choices(range(1, 1000), k=1000)
-            minimum: int = min(sequence)
             for j in range(1000):
                 stack.push(sequence[j])
+            tail_cut: int = random.randint(0, 999)
+            for j in range(tail_cut):
+                stack.pop()
+            sequence = sequence[0:1000 - tail_cut]
+            minimum: int = min(sequence)
 
             self.assertEqual(minimum, stack.min(),
                 "Min() didn't return the minimal element.")
@@ -168,9 +172,13 @@ class Task4ExtraTests(unittest.TestCase):
         for i in range(10000):
             stack: StackExtra = StackExtra()
             sequence: list[int] = random.choices(range(1, 1000), k=1000)
-            average: float | int = sum(sequence) / 1000
             for j in range(1000):
                 stack.push(sequence[j])
+            tail_cut: int = random.randint(0, 999)
+            for j in range(tail_cut):
+                stack.pop()
+            sequence = sequence[0:1000-tail_cut]
+            average: float | int = sum(sequence) / (1000 - tail_cut)
 
             self.assertEqual(average, stack.average(),
                 "Average() didn't return the average of elements.")
