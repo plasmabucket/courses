@@ -4,8 +4,8 @@ from task5 import Queue
 
 
 # Task 5 - exercise 3.* - Rotation of a queue for N steps
-# Space complexity: O(
-# Time complexity:  O(
+# Space complexity: O(1)
+# Time complexity:  O(n)
 def queue_rotate(queue: Queue, steps: int) -> None:
     if queue.size() == 0:
         return
