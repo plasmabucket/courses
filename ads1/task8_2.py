@@ -36,6 +36,11 @@ class DynamicHashTable(HashTable):
 # Complexity of value lookup is the same as for the regular hash table:
 # Space complexity: O(n)
 # Time complexity:  O(1)
+# From my rough and imprecise tests, multi-hash table fills up from 0% to 50%
+# capacity 40% faster than regular hash table. This increase in speed probably
+# tells more about the original hash function -- it tends to cluster values
+# together, but still, this result is significant enough to indicate that
+# multi-hash table really has an advantage at decreasing the number of collisions.
 class MultiHashTable(HashTable):
 
     def hash_fun2(self, value: str) -> int:
