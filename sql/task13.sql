@@ -1,7 +1,7 @@
 -- Task 13, 13.3.1
 UPDATE "Order Details"
 SET Discount = 0.20
-WHERE Quantity > 50;
+WHERE Discount < 0.20 AND Quantity > 50;
 
 
 -- Task 13, 13.3.2
